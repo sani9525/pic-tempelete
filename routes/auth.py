@@ -45,3 +45,16 @@ async def get_users(user_data: dict = Depends(verify_token)):
         return [dict(record) for record in result]
     finally:
         await conn.close()
+
+
+@router.get("/get_user/{user_id}")
+async def get_user(user_id: int, user_data: dict = Depends(verify_token)):
+    conn = await get_connection()
+    try:
+        result = await conn.fetchrow("SELECT * FROM users WHERE user_id = $1", user_id)
+        if result:
+            print("authenticated user :", user_data)
+            return dict(result)
+        raise HTTPException(status_code=404, detail="User not found")
+    finally:
+        await conn.close()
