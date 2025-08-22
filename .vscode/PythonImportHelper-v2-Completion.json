@@ -40,6 +40,30 @@
         "documentation": {}
     },
     {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -112,6 +136,14 @@
         "documentation": {}
     },
     {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -168,19 +200,19 @@
         "documentation": {}
     },
     {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "datetime",
         "documentation": {}
     },
     {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
         "isExtraImport": true,
-        "detail": "enum",
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -208,12 +240,94 @@
         "documentation": {}
     },
     {
+        "label": "generate_otp",
+        "importPath": "utils.otp_verification",
+        "description": "utils.otp_verification",
+        "isExtraImport": true,
+        "detail": "utils.otp_verification",
+        "documentation": {}
+    },
+    {
+        "label": "send_otp_email",
+        "importPath": "utils.otp_verification",
+        "description": "utils.otp_verification",
+        "isExtraImport": true,
+        "detail": "utils.otp_verification",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "smtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib",
+        "description": "smtplib",
+        "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEText",
+        "importPath": "email.mime.text",
+        "description": "email.mime.text",
+        "isExtraImport": true,
+        "detail": "email.mime.text",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "os",
         "description": "os",
         "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
         "documentation": {}
     },
     {
@@ -246,22 +360,6 @@
         "description": "jose",
         "isExtraImport": true,
         "detail": "jose",
-        "documentation": {}
-    },
-    {
-        "label": "load_dotenv",
-        "importPath": "dotenv",
-        "description": "dotenv",
-        "isExtraImport": true,
-        "detail": "dotenv",
-        "documentation": {}
-    },
-    {
-        "label": "load_dotenv",
-        "importPath": "dotenv",
-        "description": "dotenv",
-        "isExtraImport": true,
-        "detail": "dotenv",
         "documentation": {}
     },
     {
@@ -300,6 +398,14 @@
     },
     {
         "label": "auth",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "otp",
         "importPath": "routes",
         "description": "routes",
         "isExtraImport": true,
@@ -358,6 +464,51 @@
         "description": "routes.auth",
         "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"Users\"])\n@router.post(\"/add_user/\")\nasync def add_user(data:UserCreate):\n    conn = await get_connection()\n    try:\n        await conn.execute(\"INSERT INTO users(name, email, phone, password) VALUES ($1, $2, $3, $4)\", data.name, data.email, data.phone, data.password)\n        return {\"message\": \"User added successfully\"}\n    except Exception as e:\n        raise HTTPException(status_code=500, detail=str(e))\n    finally:",
         "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
+        "label": "send_otp",
+        "kind": 2,
+        "importPath": "routes.otp",
+        "description": "routes.otp",
+        "peekOfCode": "def send_otp(email: EmailStr = Form(...)):\n    otp = generate_otp()\n    expiry_time = datetime.utcnow() + timedelta(minutes=OTP_EXPIRY_MINUTES)\n    # Store OTP and expiry\n    otp_storage[email] = {\"otp\": otp, \"expires_at\": expiry_time}\n    # Send OTP via email\n    try:\n        send_otp_email(email, otp)\n        return {\"message\": \"OTP sent successfully\"}\n    except Exception as e:",
+        "detail": "routes.otp",
+        "documentation": {}
+    },
+    {
+        "label": "verify_otp",
+        "kind": 2,
+        "importPath": "routes.otp",
+        "description": "routes.otp",
+        "peekOfCode": "def verify_otp(email: EmailStr = Form(...), otp: str = Form(...)):\n    record = otp_storage.get(email)\n    if not record:\n        raise HTTPException(status_code=400, detail=\"OTP not sent or expired\")\n    if datetime.utcnow() > record['expires_at']:\n        del otp_storage[email]\n        raise HTTPException(status_code=400, detail=\"OTP expired\")\n    if record['otp'] != otp:\n        raise HTTPException(status_code=400, detail=\"Invalid OTP\")\n    # OTP is valid, remove it",
+        "detail": "routes.otp",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "routes.otp",
+        "description": "routes.otp",
+        "peekOfCode": "router = APIRouter(prefix=\"/otp\", tags=[\"OTP\"])\n# In-memory storage for OTPs (for production use Redis or DB)\notp_storage = {}\nOTP_EXPIRY_MINUTES = 5\n@router.post(\"/send-otp/\")\ndef send_otp(email: EmailStr = Form(...)):\n    otp = generate_otp()\n    expiry_time = datetime.utcnow() + timedelta(minutes=OTP_EXPIRY_MINUTES)\n    # Store OTP and expiry\n    otp_storage[email] = {\"otp\": otp, \"expires_at\": expiry_time}",
+        "detail": "routes.otp",
+        "documentation": {}
+    },
+    {
+        "label": "otp_storage",
+        "kind": 5,
+        "importPath": "routes.otp",
+        "description": "routes.otp",
+        "peekOfCode": "otp_storage = {}\nOTP_EXPIRY_MINUTES = 5\n@router.post(\"/send-otp/\")\ndef send_otp(email: EmailStr = Form(...)):\n    otp = generate_otp()\n    expiry_time = datetime.utcnow() + timedelta(minutes=OTP_EXPIRY_MINUTES)\n    # Store OTP and expiry\n    otp_storage[email] = {\"otp\": otp, \"expires_at\": expiry_time}\n    # Send OTP via email\n    try:",
+        "detail": "routes.otp",
+        "documentation": {}
+    },
+    {
+        "label": "OTP_EXPIRY_MINUTES",
+        "kind": 5,
+        "importPath": "routes.otp",
+        "description": "routes.otp",
+        "peekOfCode": "OTP_EXPIRY_MINUTES = 5\n@router.post(\"/send-otp/\")\ndef send_otp(email: EmailStr = Form(...)):\n    otp = generate_otp()\n    expiry_time = datetime.utcnow() + timedelta(minutes=OTP_EXPIRY_MINUTES)\n    # Store OTP and expiry\n    otp_storage[email] = {\"otp\": otp, \"expires_at\": expiry_time}\n    # Send OTP via email\n    try:\n        send_otp_email(email, otp)",
+        "detail": "routes.otp",
         "documentation": {}
     },
     {
@@ -565,6 +716,60 @@
         "description": "schemas.users",
         "peekOfCode": "class UserResponse(UserBase):\n    user_id: int",
         "detail": "schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "generate_otp",
+        "kind": 2,
+        "importPath": "utils.otp_verification",
+        "description": "utils.otp_verification",
+        "peekOfCode": "def generate_otp(length: int = 6) -> str:\n    \"\"\"Generate a numeric OTP\"\"\"\n    return ''.join([str(random.randint(0, 9)) for _ in range(length)])\nSMTP_SERVER = \"smtp.gmail.com\"\nSMTP_PORT = 587\nSMTP_USER = os.getenv(\"SMTP_USER\")\nSMTP_PASSWORD = os.getenv(\"SMTP_PASSWORD\")\ndef send_otp_email(to_email: str, otp: str):\n    subject = \"Your OTP Code\"\n    body = f\"Your OTP code is: {otp}\"",
+        "detail": "utils.otp_verification",
+        "documentation": {}
+    },
+    {
+        "label": "send_otp_email",
+        "kind": 2,
+        "importPath": "utils.otp_verification",
+        "description": "utils.otp_verification",
+        "peekOfCode": "def send_otp_email(to_email: str, otp: str):\n    subject = \"Your OTP Code\"\n    body = f\"Your OTP code is: {otp}\"\n    msg = MIMEText(body)\n    msg['Subject'] = subject\n    msg['From'] = SMTP_USER\n    msg['To'] = to_email\n    server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)\n    server.starttls()\n    server.login(SMTP_USER, SMTP_PASSWORD)",
+        "detail": "utils.otp_verification",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_SERVER",
+        "kind": 5,
+        "importPath": "utils.otp_verification",
+        "description": "utils.otp_verification",
+        "peekOfCode": "SMTP_SERVER = \"smtp.gmail.com\"\nSMTP_PORT = 587\nSMTP_USER = os.getenv(\"SMTP_USER\")\nSMTP_PASSWORD = os.getenv(\"SMTP_PASSWORD\")\ndef send_otp_email(to_email: str, otp: str):\n    subject = \"Your OTP Code\"\n    body = f\"Your OTP code is: {otp}\"\n    msg = MIMEText(body)\n    msg['Subject'] = subject\n    msg['From'] = SMTP_USER",
+        "detail": "utils.otp_verification",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_PORT",
+        "kind": 5,
+        "importPath": "utils.otp_verification",
+        "description": "utils.otp_verification",
+        "peekOfCode": "SMTP_PORT = 587\nSMTP_USER = os.getenv(\"SMTP_USER\")\nSMTP_PASSWORD = os.getenv(\"SMTP_PASSWORD\")\ndef send_otp_email(to_email: str, otp: str):\n    subject = \"Your OTP Code\"\n    body = f\"Your OTP code is: {otp}\"\n    msg = MIMEText(body)\n    msg['Subject'] = subject\n    msg['From'] = SMTP_USER\n    msg['To'] = to_email",
+        "detail": "utils.otp_verification",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_USER",
+        "kind": 5,
+        "importPath": "utils.otp_verification",
+        "description": "utils.otp_verification",
+        "peekOfCode": "SMTP_USER = os.getenv(\"SMTP_USER\")\nSMTP_PASSWORD = os.getenv(\"SMTP_PASSWORD\")\ndef send_otp_email(to_email: str, otp: str):\n    subject = \"Your OTP Code\"\n    body = f\"Your OTP code is: {otp}\"\n    msg = MIMEText(body)\n    msg['Subject'] = subject\n    msg['From'] = SMTP_USER\n    msg['To'] = to_email\n    server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)",
+        "detail": "utils.otp_verification",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_PASSWORD",
+        "kind": 5,
+        "importPath": "utils.otp_verification",
+        "description": "utils.otp_verification",
+        "peekOfCode": "SMTP_PASSWORD = os.getenv(\"SMTP_PASSWORD\")\ndef send_otp_email(to_email: str, otp: str):\n    subject = \"Your OTP Code\"\n    body = f\"Your OTP code is: {otp}\"\n    msg = MIMEText(body)\n    msg['Subject'] = subject\n    msg['From'] = SMTP_USER\n    msg['To'] = to_email\n    server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)\n    server.starttls()",
+        "detail": "utils.otp_verification",
         "documentation": {}
     },
     {
