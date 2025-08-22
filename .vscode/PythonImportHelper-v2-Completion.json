@@ -1,0 +1,633 @@
+[
+    {
+        "label": "get_connection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "get_connection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreate",
+        "importPath": "schemas.users",
+        "description": "schemas.users",
+        "isExtraImport": true,
+        "detail": "schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "importPath": "schemas.users",
+        "description": "schemas.users",
+        "isExtraImport": true,
+        "detail": "schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "LoginUser",
+        "importPath": "schemas.users",
+        "description": "schemas.users",
+        "isExtraImport": true,
+        "detail": "schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "isExtraImport": true,
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "verify_token",
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "isExtraImport": true,
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "HttpUrl",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPAuthorizationCredentials",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "importPath": "jose",
+        "description": "jose",
+        "isExtraImport": true,
+        "detail": "jose",
+        "documentation": {}
+    },
+    {
+        "label": "JWTError",
+        "importPath": "jose",
+        "description": "jose",
+        "isExtraImport": true,
+        "detail": "jose",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "asyncpg",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncpg",
+        "description": "asyncpg",
+        "detail": "asyncpg",
+        "documentation": {}
+    },
+    {
+        "label": "ssl",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ssl",
+        "description": "ssl",
+        "detail": "ssl",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "create_table",
+        "importPath": "models.model",
+        "description": "models.model",
+        "isExtraImport": true,
+        "detail": "models.model",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "sellers",
+        "kind": 5,
+        "importPath": "models.model",
+        "description": "models.model",
+        "peekOfCode": "sellers = '''CREATE TABLE IF NOT EXISTS sellers(\n    seller_id SERIAL PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,\n    contact_info VARCHAR(100) NOT NULL,\n    location VARCHAR(100),\n    rating DECIMAL(2,1)\n)'''\ntemplates = '''CREATE TABLE IF NOT EXISTS templates(\n    template_id SERIAL PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,",
+        "detail": "models.model",
+        "documentation": {}
+    },
+    {
+        "label": "templates",
+        "kind": 5,
+        "importPath": "models.model",
+        "description": "models.model",
+        "peekOfCode": "templates = '''CREATE TABLE IF NOT EXISTS templates(\n    template_id SERIAL PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,\n    type VARCHAR(20) CHECK (type IN ('frame','poster','collage','gift')),\n    price NUMERIC(10,2) NOT NULL,\n    preview_image TEXT,\n    design_file TEXT,\n    seller_id INT NOT NULL,\n    FOREIGN KEY (seller_id) REFERENCES sellers(seller_id) ON DELETE CASCADE\n)'''",
+        "detail": "models.model",
+        "documentation": {}
+    },
+    {
+        "label": "orders",
+        "kind": 5,
+        "importPath": "models.model",
+        "description": "models.model",
+        "peekOfCode": "orders = '''CREATE TABLE IF NOT EXISTS orders(\n    order_id SERIAL PRIMARY KEY,\n    user_id INT NOT NULL,\n    template_id INT NOT NULL,\n    uploaded_photo_url TEXT,\n    order_status VARCHAR(20) DEFAULT 'Pending' CHECK (order_status IN ('Pending','Processing','Shipped','Delivered','Cancelled')),\n    payment_status VARCHAR(20) DEFAULT 'Pending' CHECK (payment_status IN ('Pending','Paid','Refunded')),\n    total_price NUMERIC(10,2) NOT NULL,\n    shipping_partner VARCHAR(100),\n    tracking_id VARCHAR(100),",
+        "detail": "models.model",
+        "documentation": {}
+    },
+    {
+        "label": "payments",
+        "kind": 5,
+        "importPath": "models.model",
+        "description": "models.model",
+        "peekOfCode": "payments = '''CREATE TABLE IF NOT EXISTS payments(\n    payment_id SERIAL PRIMARY KEY,\n    order_id INT NOT NULL,\n    amount NUMERIC(10,2) NOT NULL,\n    payment_method VARCHAR(50) NOT NULL,\n    transaction_status VARCHAR(20) DEFAULT 'Pending' CHECK (transaction_status IN ('Pending','Paid','Refunded')),\n    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE\n)'''\ndelivery_tracking = '''CREATE TABLE IF NOT EXISTS delivery_tracking(\n    tracking_id SERIAL PRIMARY KEY,",
+        "detail": "models.model",
+        "documentation": {}
+    },
+    {
+        "label": "delivery_tracking",
+        "kind": 5,
+        "importPath": "models.model",
+        "description": "models.model",
+        "peekOfCode": "delivery_tracking = '''CREATE TABLE IF NOT EXISTS delivery_tracking(\n    tracking_id SERIAL PRIMARY KEY,\n    order_id INT NOT NULL,\n    courier_partner VARCHAR(100) NOT NULL,\n    status VARCHAR(20) DEFAULT 'Shipped' CHECK (status IN ('Shipped','In Transit','Delivered')),\n    last_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE\n)'''\nasync def create_table():\n    conn=await get_connection()",
+        "detail": "models.model",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "routes.auth",
+        "description": "routes.auth",
+        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"Users\"])\n@router.post(\"/add_user/\")\nasync def add_user(data:UserCreate):\n    conn = await get_connection()\n    try:\n        await conn.execute(\"INSERT INTO users(name, email, phone, password) VALUES ($1, $2, $3, $4)\", data.name, data.email, data.phone, data.password)\n        return {\"message\": \"User added successfully\"}\n    except Exception as e:\n        raise HTTPException(status_code=500, detail=str(e))\n    finally:",
+        "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateType",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class TemplateType(str, Enum):\n    frame = \"frame\"\n    poster = \"poster\"\n    collage = \"collage\"\n    gift = \"gift\"\nclass OrderStatus(str, Enum):\n    pending = \"Pending\"\n    processing = \"Processing\"\n    shipped = \"Shipped\"\n    delivered = \"Delivered\"",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "OrderStatus",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class OrderStatus(str, Enum):\n    pending = \"Pending\"\n    processing = \"Processing\"\n    shipped = \"Shipped\"\n    delivered = \"Delivered\"\n    cancelled = \"Cancelled\"\nclass PaymentStatus(str, Enum):\n    pending = \"Pending\"\n    paid = \"Paid\"\n    refunded = \"Refunded\"",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentStatus",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class PaymentStatus(str, Enum):\n    pending = \"Pending\"\n    paid = \"Paid\"\n    refunded = \"Refunded\"\nclass DeliveryStatus(str, Enum):\n    shipped = \"Shipped\"\n    in_transit = \"In Transit\"\n    delivered = \"Delivered\"\n# -------- SELLERS --------\nclass SellerBase(BaseModel):",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "DeliveryStatus",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class DeliveryStatus(str, Enum):\n    shipped = \"Shipped\"\n    in_transit = \"In Transit\"\n    delivered = \"Delivered\"\n# -------- SELLERS --------\nclass SellerBase(BaseModel):\n    name: str\n    contact_info: str\n    location: str\n    rating: Optional[float] = None",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "SellerBase",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class SellerBase(BaseModel):\n    name: str\n    contact_info: str\n    location: str\n    rating: Optional[float] = None\nclass SellerCreate(SellerBase):\n    pass\nclass SellerResponse(SellerBase):\n    seller_id: int\n# -------- TEMPLATES --------",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "SellerCreate",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class SellerCreate(SellerBase):\n    pass\nclass SellerResponse(SellerBase):\n    seller_id: int\n# -------- TEMPLATES --------\nclass TemplateBase(BaseModel):\n    name: str\n    type: TemplateType\n    price: float\n    preview_image: Optional[HttpUrl] = None",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "SellerResponse",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class SellerResponse(SellerBase):\n    seller_id: int\n# -------- TEMPLATES --------\nclass TemplateBase(BaseModel):\n    name: str\n    type: TemplateType\n    price: float\n    preview_image: Optional[HttpUrl] = None\n    design_file: Optional[HttpUrl] = None\n    seller_id: int",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateBase",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class TemplateBase(BaseModel):\n    name: str\n    type: TemplateType\n    price: float\n    preview_image: Optional[HttpUrl] = None\n    design_file: Optional[HttpUrl] = None\n    seller_id: int\nclass TemplateCreate(TemplateBase):\n    pass\nclass TemplateResponse(TemplateBase):",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateCreate",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class TemplateCreate(TemplateBase):\n    pass\nclass TemplateResponse(TemplateBase):\n    template_id: int\n# -------- ORDERS --------\nclass OrderBase(BaseModel):\n    user_id: int\n    template_id: int\n    uploaded_photo_url: Optional[HttpUrl] = None\n    order_status: OrderStatus = OrderStatus.pending",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateResponse",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class TemplateResponse(TemplateBase):\n    template_id: int\n# -------- ORDERS --------\nclass OrderBase(BaseModel):\n    user_id: int\n    template_id: int\n    uploaded_photo_url: Optional[HttpUrl] = None\n    order_status: OrderStatus = OrderStatus.pending\n    payment_status: PaymentStatus = PaymentStatus.pending\n    total_price: float",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "OrderBase",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class OrderBase(BaseModel):\n    user_id: int\n    template_id: int\n    uploaded_photo_url: Optional[HttpUrl] = None\n    order_status: OrderStatus = OrderStatus.pending\n    payment_status: PaymentStatus = PaymentStatus.pending\n    total_price: float\n    shipping_partner: Optional[str] = None\n    tracking_id: Optional[str] = None\nclass OrderCreate(OrderBase):",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "OrderCreate",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class OrderCreate(OrderBase):\n    pass\nclass OrderResponse(OrderBase):\n    order_id: int\n# -------- PAYMENTS --------\nclass PaymentBase(BaseModel):\n    order_id: int\n    amount: float\n    payment_method: str\n    transaction_status: PaymentStatus = PaymentStatus.pending",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "OrderResponse",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class OrderResponse(OrderBase):\n    order_id: int\n# -------- PAYMENTS --------\nclass PaymentBase(BaseModel):\n    order_id: int\n    amount: float\n    payment_method: str\n    transaction_status: PaymentStatus = PaymentStatus.pending\nclass PaymentCreate(PaymentBase):\n    pass",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentBase",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class PaymentBase(BaseModel):\n    order_id: int\n    amount: float\n    payment_method: str\n    transaction_status: PaymentStatus = PaymentStatus.pending\nclass PaymentCreate(PaymentBase):\n    pass\nclass PaymentResponse(PaymentBase):\n    payment_id: int\n# -------- DELIVERY TRACKING --------",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentCreate",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class PaymentCreate(PaymentBase):\n    pass\nclass PaymentResponse(PaymentBase):\n    payment_id: int\n# -------- DELIVERY TRACKING --------\nclass DeliveryTrackingBase(BaseModel):\n    order_id: int\n    courier_partner: str\n    status: DeliveryStatus = DeliveryStatus.shipped\n    last_update: datetime = Field(default_factory=datetime.utcnow)",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentResponse",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class PaymentResponse(PaymentBase):\n    payment_id: int\n# -------- DELIVERY TRACKING --------\nclass DeliveryTrackingBase(BaseModel):\n    order_id: int\n    courier_partner: str\n    status: DeliveryStatus = DeliveryStatus.shipped\n    last_update: datetime = Field(default_factory=datetime.utcnow)\nclass DeliveryTrackingCreate(DeliveryTrackingBase):\n    pass",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "DeliveryTrackingBase",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class DeliveryTrackingBase(BaseModel):\n    order_id: int\n    courier_partner: str\n    status: DeliveryStatus = DeliveryStatus.shipped\n    last_update: datetime = Field(default_factory=datetime.utcnow)\nclass DeliveryTrackingCreate(DeliveryTrackingBase):\n    pass\nclass DeliveryTrackingResponse(DeliveryTrackingBase):\n    tracking_id: int",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "DeliveryTrackingCreate",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class DeliveryTrackingCreate(DeliveryTrackingBase):\n    pass\nclass DeliveryTrackingResponse(DeliveryTrackingBase):\n    tracking_id: int",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "DeliveryTrackingResponse",
+        "kind": 6,
+        "importPath": "schemas.schamas",
+        "description": "schemas.schamas",
+        "peekOfCode": "class DeliveryTrackingResponse(DeliveryTrackingBase):\n    tracking_id: int",
+        "detail": "schemas.schamas",
+        "documentation": {}
+    },
+    {
+        "label": "LoginUser",
+        "kind": 6,
+        "importPath": "schemas.users",
+        "description": "schemas.users",
+        "peekOfCode": "class LoginUser(BaseModel):\n    email: EmailStr\n    password: str\nclass UserBase(BaseModel):\n    name: str\n    email: EmailStr\n    phone: int\n    password: str\nclass UserCreate(UserBase):\n    pass",
+        "detail": "schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserBase",
+        "kind": 6,
+        "importPath": "schemas.users",
+        "description": "schemas.users",
+        "peekOfCode": "class UserBase(BaseModel):\n    name: str\n    email: EmailStr\n    phone: int\n    password: str\nclass UserCreate(UserBase):\n    pass\nclass UserResponse(UserBase):\n    user_id: int",
+        "detail": "schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreate",
+        "kind": 6,
+        "importPath": "schemas.users",
+        "description": "schemas.users",
+        "peekOfCode": "class UserCreate(UserBase):\n    pass\nclass UserResponse(UserBase):\n    user_id: int",
+        "detail": "schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "kind": 6,
+        "importPath": "schemas.users",
+        "description": "schemas.users",
+        "peekOfCode": "class UserResponse(UserBase):\n    user_id: int",
+        "detail": "schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "kind": 2,
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "peekOfCode": "def create_access_token(data: dict) -> str:\n    expire = datetime.utcnow() + timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS)\n    data.update({\"exp\": expire})\n    return jwt.encode(data, SECRET_KEY, algorithm=ALGORITHM)\ndef verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):\n    token = credentials.credentials\n    try:\n        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])\n        return payload\n    except JWTError:",
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "verify_token",
+        "kind": 2,
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "peekOfCode": "def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):\n    token = credentials.credentials\n    try:\n        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])\n        return payload\n    except JWTError:\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED,\n            detail=\"Token is invalid or expired\",\n            headers={\"WWW-Authenticate\": \"Bearer\"},",
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\nALGORITHM = os.getenv(\"ALGORITHM\")\nACCESS_TOKEN_EXPIRE_HOURS = 24\nsecurity = HTTPBearer()\ndef create_access_token(data: dict) -> str:\n    expire = datetime.utcnow() + timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS)\n    data.update({\"exp\": expire})\n    return jwt.encode(data, SECRET_KEY, algorithm=ALGORITHM)\ndef verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):\n    token = credentials.credentials",
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "ALGORITHM",
+        "kind": 5,
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "peekOfCode": "ALGORITHM = os.getenv(\"ALGORITHM\")\nACCESS_TOKEN_EXPIRE_HOURS = 24\nsecurity = HTTPBearer()\ndef create_access_token(data: dict) -> str:\n    expire = datetime.utcnow() + timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS)\n    data.update({\"exp\": expire})\n    return jwt.encode(data, SECRET_KEY, algorithm=ALGORITHM)\ndef verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):\n    token = credentials.credentials\n    try:",
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "ACCESS_TOKEN_EXPIRE_HOURS",
+        "kind": 5,
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "peekOfCode": "ACCESS_TOKEN_EXPIRE_HOURS = 24\nsecurity = HTTPBearer()\ndef create_access_token(data: dict) -> str:\n    expire = datetime.utcnow() + timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS)\n    data.update({\"exp\": expire})\n    return jwt.encode(data, SECRET_KEY, algorithm=ALGORITHM)\ndef verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):\n    token = credentials.credentials\n    try:\n        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])",
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "security",
+        "kind": 5,
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "peekOfCode": "security = HTTPBearer()\ndef create_access_token(data: dict) -> str:\n    expire = datetime.utcnow() + timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS)\n    data.update({\"exp\": expire})\n    return jwt.encode(data, SECRET_KEY, algorithm=ALGORITHM)\ndef verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):\n    token = credentials.credentials\n    try:\n        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])\n        return payload",
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "db",
+        "description": "db",
+        "peekOfCode": "DATABASE_URL = os.getenv(\"DATABASE_URL\")\nasync def get_connection():\n    ssl_context = ssl.create_default_context()\n    ssl_context.check_hostname = False  # 🚨 disable hostname verification\n    ssl_context.verify_mode = ssl.CERT_NONE  # 🚨 ignore self-signed cert\n    return await asyncpg.connect(\n        DATABASE_URL,\n        ssl=ssl_context\n    )",
+        "detail": "db",
+        "documentation": {}
+    }
+]
