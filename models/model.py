@@ -17,6 +17,7 @@ users='''CREATE TABLE IF NOT EXISTS users(
 
 sellers = '''CREATE TABLE IF NOT EXISTS sellers(
     seller_id SERIAL PRIMARY KEY,
+    user_id INT UNIQUE NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
     name VARCHAR(100) NOT NULL,
     contact_info VARCHAR(100) NOT NULL,
     location VARCHAR(100),
@@ -71,6 +72,7 @@ async def create_table():
     try:
         await conn.execute(user_data)
         await conn.execute(users)
+        await conn.execute(sellers)
         print("Tables created successfully")
     except Exception as e:
         return e

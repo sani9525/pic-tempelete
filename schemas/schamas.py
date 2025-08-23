@@ -30,22 +30,6 @@ class DeliveryStatus(str, Enum):
     in_transit = "In Transit"
     delivered = "Delivered"
 
-# -------- SELLERS --------
-class SellerBase(BaseModel):
-    name: str
-    contact_info: str
-    location: str
-    rating: Optional[float] = None
-
-
-class SellerCreate(SellerBase):
-    pass
-
-
-class SellerResponse(SellerBase):
-    seller_id: int
-
-
 # -------- TEMPLATES --------
 class TemplateBase(BaseModel):
     name: str

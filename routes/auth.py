@@ -7,8 +7,8 @@ from utils.security import create_access_token, verify_token
 router = APIRouter(prefix="/users", tags=["Users"])
 
 
-@router.post("/add_user/")
-async def add_user(data:UserCreate):
+@router.post("/ragister_user/")
+async def ragister_user(data:UserCreate):
     conn = await get_connection()
     try:
         await conn.execute("INSERT INTO users(name, email, phone, password) VALUES ($1, $2, $3, $4)", data.name, data.email, data.phone, data.password)
@@ -47,11 +47,11 @@ async def get_users(user_data: dict = Depends(verify_token)):
         await conn.close()
 
 
-@router.get("/get_user/{user_id}")
-async def get_user(user_id: int, user_data: dict = Depends(verify_token)):
+@router.get("/get_user/{email_id}")
+async def get_user(email_id: str, user_data: dict = Depends(verify_token)):
     conn = await get_connection()
     try:
-        result = await conn.fetchrow("SELECT * FROM users WHERE user_id = $1", user_id)
+        result = await conn.fetchrow("SELECT * FROM users WHERE email = $1", email_id)
         if result:
             print("authenticated user :", user_data)
             return dict(result)

@@ -16,6 +16,14 @@
         "documentation": {}
     },
     {
+        "label": "get_connection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
         "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -57,6 +65,30 @@
     },
     {
         "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -136,6 +168,22 @@
         "documentation": {}
     },
     {
+        "label": "create_access_token",
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "isExtraImport": true,
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "verify_token",
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "isExtraImport": true,
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
         "label": "EmailStr",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -169,6 +217,14 @@
     },
     {
         "label": "HttpUrl",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -253,6 +309,38 @@
         "description": "utils.otp_verification",
         "isExtraImport": true,
         "detail": "utils.otp_verification",
+        "documentation": {}
+    },
+    {
+        "label": "SellerCreate",
+        "importPath": "schemas.sellers",
+        "description": "schemas.sellers",
+        "isExtraImport": true,
+        "detail": "schemas.sellers",
+        "documentation": {}
+    },
+    {
+        "label": "SellerResponse",
+        "importPath": "schemas.sellers",
+        "description": "schemas.sellers",
+        "isExtraImport": true,
+        "detail": "schemas.sellers",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -414,10 +502,18 @@
     },
     {
         "label": "sellers",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "sellers",
         "kind": 5,
         "importPath": "models.model",
         "description": "models.model",
-        "peekOfCode": "sellers = '''CREATE TABLE IF NOT EXISTS sellers(\n    seller_id SERIAL PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,\n    contact_info VARCHAR(100) NOT NULL,\n    location VARCHAR(100),\n    rating DECIMAL(2,1)\n)'''\ntemplates = '''CREATE TABLE IF NOT EXISTS templates(\n    template_id SERIAL PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,",
+        "peekOfCode": "sellers = '''CREATE TABLE IF NOT EXISTS sellers(\n    seller_id SERIAL PRIMARY KEY,\n    user_id INT UNIQUE NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,\n    name VARCHAR(100) NOT NULL,\n    contact_info VARCHAR(100) NOT NULL,\n    location VARCHAR(100),\n    rating DECIMAL(2,1)\n)'''\ntemplates = '''CREATE TABLE IF NOT EXISTS templates(\n    template_id SERIAL PRIMARY KEY,",
         "detail": "models.model",
         "documentation": {}
     },
@@ -462,7 +558,7 @@
         "kind": 5,
         "importPath": "routes.auth",
         "description": "routes.auth",
-        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"Users\"])\n@router.post(\"/add_user/\")\nasync def add_user(data:UserCreate):\n    conn = await get_connection()\n    try:\n        await conn.execute(\"INSERT INTO users(name, email, phone, password) VALUES ($1, $2, $3, $4)\", data.name, data.email, data.phone, data.password)\n        return {\"message\": \"User added successfully\"}\n    except Exception as e:\n        raise HTTPException(status_code=500, detail=str(e))\n    finally:",
+        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"Users\"])\n@router.post(\"/ragister_user/\")\nasync def ragister_user(data:UserCreate):\n    conn = await get_connection()\n    try:\n        await conn.execute(\"INSERT INTO users(name, email, phone, password) VALUES ($1, $2, $3, $4)\", data.name, data.email, data.phone, data.password)\n        return {\"message\": \"User added successfully\"}\n    except Exception as e:\n        raise HTTPException(status_code=500, detail=str(e))\n    finally:",
         "detail": "routes.auth",
         "documentation": {}
     },
@@ -512,6 +608,15 @@
         "documentation": {}
     },
     {
+        "label": "router",
+        "kind": 5,
+        "importPath": "routes.sellers",
+        "description": "routes.sellers",
+        "peekOfCode": "router = APIRouter(prefix=\"/sellers\", tags=[\"Sellers\"])\n@router.post(\"/create_seller\")\nasync def create_seller(seller: SellerCreate,user_data: dict = Depends(verify_token)):\n    conn = await get_connection()\n    print(\"authenticated user :\", user_data)\n    try:\n        result = await conn.execute(\n            \"INSERT INTO sellers (user_id, name, contact_info, location, rating) VALUES ($1, $2, $3, $4, $5)\",\n            seller.user_id,\n            seller.name,",
+        "detail": "routes.sellers",
+        "documentation": {}
+    },
+    {
         "label": "TemplateType",
         "kind": 6,
         "importPath": "schemas.schamas",
@@ -534,7 +639,7 @@
         "kind": 6,
         "importPath": "schemas.schamas",
         "description": "schemas.schamas",
-        "peekOfCode": "class PaymentStatus(str, Enum):\n    pending = \"Pending\"\n    paid = \"Paid\"\n    refunded = \"Refunded\"\nclass DeliveryStatus(str, Enum):\n    shipped = \"Shipped\"\n    in_transit = \"In Transit\"\n    delivered = \"Delivered\"\n# -------- SELLERS --------\nclass SellerBase(BaseModel):",
+        "peekOfCode": "class PaymentStatus(str, Enum):\n    pending = \"Pending\"\n    paid = \"Paid\"\n    refunded = \"Refunded\"\nclass DeliveryStatus(str, Enum):\n    shipped = \"Shipped\"\n    in_transit = \"In Transit\"\n    delivered = \"Delivered\"\n# -------- TEMPLATES --------\nclass TemplateBase(BaseModel):",
         "detail": "schemas.schamas",
         "documentation": {}
     },
@@ -543,34 +648,7 @@
         "kind": 6,
         "importPath": "schemas.schamas",
         "description": "schemas.schamas",
-        "peekOfCode": "class DeliveryStatus(str, Enum):\n    shipped = \"Shipped\"\n    in_transit = \"In Transit\"\n    delivered = \"Delivered\"\n# -------- SELLERS --------\nclass SellerBase(BaseModel):\n    name: str\n    contact_info: str\n    location: str\n    rating: Optional[float] = None",
-        "detail": "schemas.schamas",
-        "documentation": {}
-    },
-    {
-        "label": "SellerBase",
-        "kind": 6,
-        "importPath": "schemas.schamas",
-        "description": "schemas.schamas",
-        "peekOfCode": "class SellerBase(BaseModel):\n    name: str\n    contact_info: str\n    location: str\n    rating: Optional[float] = None\nclass SellerCreate(SellerBase):\n    pass\nclass SellerResponse(SellerBase):\n    seller_id: int\n# -------- TEMPLATES --------",
-        "detail": "schemas.schamas",
-        "documentation": {}
-    },
-    {
-        "label": "SellerCreate",
-        "kind": 6,
-        "importPath": "schemas.schamas",
-        "description": "schemas.schamas",
-        "peekOfCode": "class SellerCreate(SellerBase):\n    pass\nclass SellerResponse(SellerBase):\n    seller_id: int\n# -------- TEMPLATES --------\nclass TemplateBase(BaseModel):\n    name: str\n    type: TemplateType\n    price: float\n    preview_image: Optional[HttpUrl] = None",
-        "detail": "schemas.schamas",
-        "documentation": {}
-    },
-    {
-        "label": "SellerResponse",
-        "kind": 6,
-        "importPath": "schemas.schamas",
-        "description": "schemas.schamas",
-        "peekOfCode": "class SellerResponse(SellerBase):\n    seller_id: int\n# -------- TEMPLATES --------\nclass TemplateBase(BaseModel):\n    name: str\n    type: TemplateType\n    price: float\n    preview_image: Optional[HttpUrl] = None\n    design_file: Optional[HttpUrl] = None\n    seller_id: int",
+        "peekOfCode": "class DeliveryStatus(str, Enum):\n    shipped = \"Shipped\"\n    in_transit = \"In Transit\"\n    delivered = \"Delivered\"\n# -------- TEMPLATES --------\nclass TemplateBase(BaseModel):\n    name: str\n    type: TemplateType\n    price: float\n    preview_image: Optional[HttpUrl] = None",
         "detail": "schemas.schamas",
         "documentation": {}
     },
@@ -683,11 +761,38 @@
         "documentation": {}
     },
     {
+        "label": "SellerBase",
+        "kind": 6,
+        "importPath": "schemas.sellers",
+        "description": "schemas.sellers",
+        "peekOfCode": "class SellerBase(BaseModel):\n    user_id: int\n    name: str\n    contact_info: str\n    location: str\n    rating: Optional[float] = None\nclass SellerCreate(SellerBase):\n    pass\nclass SellerResponse(SellerBase):\n    seller_id: int",
+        "detail": "schemas.sellers",
+        "documentation": {}
+    },
+    {
+        "label": "SellerCreate",
+        "kind": 6,
+        "importPath": "schemas.sellers",
+        "description": "schemas.sellers",
+        "peekOfCode": "class SellerCreate(SellerBase):\n    pass\nclass SellerResponse(SellerBase):\n    seller_id: int",
+        "detail": "schemas.sellers",
+        "documentation": {}
+    },
+    {
+        "label": "SellerResponse",
+        "kind": 6,
+        "importPath": "schemas.sellers",
+        "description": "schemas.sellers",
+        "peekOfCode": "class SellerResponse(SellerBase):\n    seller_id: int",
+        "detail": "schemas.sellers",
+        "documentation": {}
+    },
+    {
         "label": "LoginUser",
         "kind": 6,
         "importPath": "schemas.users",
         "description": "schemas.users",
-        "peekOfCode": "class LoginUser(BaseModel):\n    email: EmailStr\n    password: str\nclass UserBase(BaseModel):\n    name: str\n    email: EmailStr\n    phone: int\n    password: str\nclass UserCreate(UserBase):\n    pass",
+        "peekOfCode": "class LoginUser(BaseModel):\n    email: EmailStr\n    password: str\nclass UserBase(BaseModel):\n    name: str\n    email: EmailStr\n    phone: Optional[int] = 0\n    password: str\nclass UserCreate(UserBase):\n    pass",
         "detail": "schemas.users",
         "documentation": {}
     },
@@ -696,7 +801,7 @@
         "kind": 6,
         "importPath": "schemas.users",
         "description": "schemas.users",
-        "peekOfCode": "class UserBase(BaseModel):\n    name: str\n    email: EmailStr\n    phone: int\n    password: str\nclass UserCreate(UserBase):\n    pass\nclass UserResponse(UserBase):\n    user_id: int",
+        "peekOfCode": "class UserBase(BaseModel):\n    name: str\n    email: EmailStr\n    phone: Optional[int] = 0\n    password: str\nclass UserCreate(UserBase):\n    pass\nclass UserResponse(UserBase):\n    user_id: int",
         "detail": "schemas.users",
         "documentation": {}
     },
